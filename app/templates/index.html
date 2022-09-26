@@ -1,0 +1,28 @@
+<html>
+    <head>
+        <title>TeamProjectApp</title>
+		<style>
+		table, th, td {
+		  border:1px solid black;
+		}
+		</style>
+    </head>
+    <body>
+        <h1>Hello World!</h1>
+		<table style="width:100%">
+			<tr>
+				<th>ID</th>
+				<th>First Name</th>
+				<th>Last Name</th>
+				<th>Codename</th>
+			</tr>
+			{% for col in rows: %}
+			<tr>
+				{% for i in col: %}
+				<th>{{ i }} </th>
+				{% endfor %}
+			</tr>
+			{% endfor %}
+		</table>
+    </body>
+</html>
