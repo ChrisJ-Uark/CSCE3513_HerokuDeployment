@@ -13,6 +13,14 @@
 			color: black;
 			text-align: center;
 		}
+		.tableheader {
+			font-weight:bold;
+			font-size:20px;
+		}
+		.htmlRows {
+			font-weight:normal;
+			font-size:16px;
+		}
 		</style>
     </head>
     <body>
@@ -20,15 +28,15 @@
 		<h2>Database Inquiry</h2>
 		<table style="width:100%">
 			<tr>
-				<th>ID</th>
-				<th>First Name</th>
-				<th>Last Name</th>
-				<th>Codename</th>
+				<th class="tableheader">ID</th>
+				<th class="tableheader">First Name</th>
+				<th class="tableheader">Last Name</th>
+				<th class="tableheader">Codename</th>
 			</tr>
 			{% for col in rows: %}
 			<tr>
 				{% for i in col: %}
-				<th>{{ i }} </th>
+				<th class="htmlRows">{{ i }} </th>
 				{% endfor %}
 			</tr>
 			{% endfor %}
