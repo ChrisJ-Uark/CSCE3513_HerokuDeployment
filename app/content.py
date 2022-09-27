@@ -21,7 +21,7 @@ def queryDB():
                                 
         cursor = conn.cursor()
 
-        cursor.execute("SELECT * FROM test")
+        cursor.execute("SELECT * FROM test ORDER BY id")
         rows = cursor.fetchall()
     except (Exception, psycopg2.DatabaseError) as error:
             print("Error:")
